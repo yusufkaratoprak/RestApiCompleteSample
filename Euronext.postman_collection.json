@@ -1,0 +1,118 @@
+{
+	"info": {
+		"_postman_id": "69362934-4d50-4f99-933b-77b43121ce10",
+		"name": "Euronext",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19160"
+	},
+	"item": [
+		{
+			"name": "weekly docker",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:32786/Weather/weekly?startDate=12.04.2024",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "32786",
+					"path": [
+						"Weather",
+						"weekly"
+					],
+					"query": [
+						{
+							"key": "startDate",
+							"value": "12.04.2024"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "weekly docker-compose",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/Weather/weekly?startDate=04.11.2024",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Weather",
+						"weekly"
+					],
+					"query": [
+						{
+							"key": "startDate",
+							"value": "04.11.2024"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add docker-compose",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"date\": \"2024-04-11T20:30:00.464Z\",\r\n  \"temp\": 0,\r\n  \"result\": \"Balmy\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/Weather/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Weather",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add docker",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"date\": \"2024-04-11T20:30:00.464Z\",\r\n  \"temp\": 0,\r\n  \"result\": \"Balmy\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:32788/Weather/add",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "32788",
+					"path": [
+						"Weather",
+						"add"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
