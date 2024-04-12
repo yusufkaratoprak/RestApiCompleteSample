@@ -1,0 +1,6 @@
+@euro.next_HostAddress = http://localhost:5013
+
+GET {{euro.next_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
